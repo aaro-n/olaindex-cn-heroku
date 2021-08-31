@@ -19,5 +19,5 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
-    RewriteRule /favicon.ico  %{ENV:FAVICON_ICO} [L]
+    RewriteRule "^(.+)favicon\.ico(|\?.+)$"  "%{ENV:FAVICON_ICO}" [PT]
 </IfModule>
